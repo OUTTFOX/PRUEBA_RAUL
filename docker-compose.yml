@@ -1,0 +1,65 @@
+
+version: "3.9"
+
+services:   
+ frio1: 
+   image: alpine:3.22
+   container_name: frio1
+   command: sh -c "while true; do sleep 3600; done"
+   networks: 
+   - red-frio
+
+ frio2: 
+   image: alpine:3.22
+   container_name: frio2
+   command: sh -c "while true; do sleep 3600; done"
+   networks: 
+   - red-frio
+
+ frio3: 
+   image: alpine:3.22
+   container_name: frio3
+   command: sh -c "while true; do sleep 3600; done"
+   networks: 
+   - red-frio
+
+ frio4: 
+   image: alpine:3.22
+   container_name: frio4
+   command: sh -c "while true; do sleep 3600; done"
+   networks: 
+   - red-frio
+
+ cal1: 
+   image: alpine:3.22
+   container_name: cal1
+   command: sh -c "while true; do sleep 3600; done"
+   networks: 
+   - red-caliente
+
+ cal2: 
+   image: alpine:3.22
+   container_name: cal2
+   command: sh -c "while true; do sleep 3600; done"
+   networks: 
+   - red-caliente
+
+ cal3: 
+   image: alpine:3.22
+   container_name: cal3
+   command: sh -c "while true; do sleep 3600; done"
+   networks: 
+   - red-caliente
+
+ cal4: 
+   image: alpine:3.22
+   container_name: cal4
+   command: sh -c "while true; do sleep 3600; done"
+   networks: 
+   - red-caliente
+
+networks:
+ red-frio:
+  driver: bridge
+ red-caliente:
+  driver: bridge
