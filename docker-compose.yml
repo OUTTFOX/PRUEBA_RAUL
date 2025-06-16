@@ -2,6 +2,16 @@
 version: "3.9"
 
 services:   
+ 
+ tibio: 
+   image: alpine:3.22
+   container_name: tibio
+   networks: 
+   - red-frio
+   - red-caliente
+   command: sh -c "while true; do sleep 60; done"
+
+
  frio1: 
    image: alpine:3.22
    container_name: frio1
